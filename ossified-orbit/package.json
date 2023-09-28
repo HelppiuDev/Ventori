@@ -1,0 +1,27 @@
+{
+  "main": "index.astro",
+
+  "name": "ossified-orbit",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+
+  "dependencies": {
+    "astro": "^3.1.1",
+    "swiper": "^10.3.0",
+    "serve": "^11.2.0"
+
+  },
+  "tags": ["swiper"],
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+  
+}
