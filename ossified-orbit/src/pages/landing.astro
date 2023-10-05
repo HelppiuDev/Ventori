@@ -21,6 +21,7 @@
          <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <title>Ventori</title>
     </head>
     <body>
@@ -33,26 +34,10 @@
                             <a href="#" class="nav__logo">
                                 <img class="logo_home"src="assets/images/logo.png" alt="">
                             </a>
-            
-                            <!-- <div class="nav__menu" id="nav-menu">
-                                <ul class="nav__list">
-                                    <li class="nav__item">
-                                        <a href="#home" class="nav__link active-link">Home</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#specs" class="nav__link">Beneficios</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#case" class="nav__link">POS</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#products" class="nav__link">Contacto</a>
-                                    </li>
-                                </ul>
-                            </div> -->
                         </nav>
                     </header> 
                     <div class="home__container container" >
+                        
                         <!-- <img class="bg_home"src="assets/images/bannerprincipal.png" alt=""> <div>-->
                             <div class="home__header">
                                 <h1 class="big_titles_home" >Tu solución <span class="blue">POS</span> en la nube para gestión de <span class="green">ventas</span> e inventario</h1>
@@ -177,8 +162,25 @@
                  <!--=============== PANELS SECTION ===============-->
             <div class="container_panels">
                 <img class="bg_panel" src="assets/images/bgpanel1.png" alt="">
-                <div class="image_container">
-                    <img src="assets/images/imagepanel.png" alt="">
+                <div id="image_container">
+                    <!-- <img src="assets/images/imagepanel.png" alt=""> -->
+                    <script>
+                       var animation = bodymovin.loadAnimation({
+
+                        container: document.getElementById('image_container'),
+
+                        path: 'assets/images/imagepanel.json',
+
+                        renderer: 'svg',
+
+                        loop: true,
+
+                        autoplay: true,
+
+                        name: "Demo Animation",
+
+                        });              
+                    </script>
                 </div>
 
                 <div class="panels_data">
@@ -193,12 +195,39 @@
 
             <div class="textbar_container">
                 <div class="firsttext"> Ventori es&nbsp </div>
-              <ul class="option">
+                <div class="option">
+                    <span></span>
+                </div>
+              <!-- <ul class="option">
                 <li><span>rápidez </span></li>
                 <li><span> seguridad</span></li>
                 <li><span>más ventas </span></li>
                 <li><span>tu mejor aliado </span></li>
-              </ul>
+              </ul> -->
+
+              <script>
+                const text = document.querySelector(".option");
+             
+                const textLoad = () => {
+                    setTimeout(() => {
+                    text.textContent = "rapidez";
+                }, 0);
+                
+                setTimeout(() => {
+                    text.textContent = "seguridad ";
+                }, 1000);
+
+                setTimeout(() => {
+                    text.textContent = "más ventas ";
+                }, 2000);
+
+                setTimeout(() => {
+                    text.textContent = "tu mejor aliado";
+                }, 3000);
+                }
+                textLoad();
+                setInterval(textLoad,4000);
+              </script>
                 <!-- <div class="options">
                 <span class="sectext"> rápidez </span>
                 <span class="sectext"> seguridad </span>
