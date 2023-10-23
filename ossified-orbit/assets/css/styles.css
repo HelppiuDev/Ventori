@@ -232,18 +232,9 @@ background-color: transparent;
   position: relative;
   background-color: #0E1D47;
 }
-.bluebg::before{
-margin-top: 10%;
-  content: "";
-  position: absolute;
-  height: 50%;
-  width: 30%;
-  border-radius: 50%;
-  /* background: linear-gradient(#00A8FF,#0E1D47); */
-  background-color: #00A8FF;
-  transform: translate(150%, 10px);
 
-}
+.bluebg::before{margin-top: 5%;content: "";position: absolute;height: 350px;width: 350px;margin-left: 55%;border-radius: 50%;/* background: linear-gradient(#00A8FF,#0E1D47); */background-color: #00A8FF;/* transform: translate(180%, 10px); */}
+
 .blurbox{
   display: flex;
   width: 100%;
@@ -1487,4 +1478,5 @@ color: #FFF;
       row-gap: .5rem;
       text-align: left;
     }
+   
 } 
