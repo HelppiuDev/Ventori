@@ -1,6 +1,5 @@
 {
   "main": "index.astro",
-
   "name": "ossified-orbit",
   "type": "module",
   "version": "0.0.1",
@@ -11,17 +10,18 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-
   "dependencies": {
+    "@astrojs/node": "^6.0.3",
+    "@astrojs/vercel": "^5.0.2",
     "astro": "^3.1.1",
-    "swiper": "^10.3.0",
-    "serve": "^11.2.0"
-
+    "serve": "^11.2.0",
+    "swiper": "^10.3.0"
   },
-  "tags": ["swiper"],
+  "tags": [
+    "swiper"
+  ],
   "description": "```sh npm create astro@latest -- --template basics ```",
   "keywords": [],
   "author": "",
   "license": "ISC"
-  
 }
