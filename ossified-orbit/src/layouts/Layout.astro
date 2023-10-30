@@ -1,51 +1,510 @@
----
-interface Props {
-	title: string;
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+         rel="stylesheet">
+
+              <!--=============== SWIPPER =============== -->
+         <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
+
+         <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Ventori</title>
+    </head>
+    <body>
+    
+        <main class="main">
+            <!--=============== HOME ===============-->
+            <header class="header" id="header">
+                <nav class="nav container">
+                    <a href="#" class="nav__logo">
+                        <img class="logo_home"src="assets/images/logo.png" alt="">
+                    </a>
+                    <div class="container_access">
+                        <span class="btn_container">
+                            <i class="ri-user-line"></i></i> Iniciar sesión
+                        </span>
+                        <span class="btn_container">
+                            <i class="ri-profile-line"></i></i>Registrate
+                        </span>
+                    </div>
+                    <div class="nav_menu"id="navmenu">
+
+                    <ul class="nav_list">
+                        <div class="nav_close" id="nav-close">
+                            <i class="ri-close-line"></i>
+                        </div>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Inicio sesión</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Registrate</a>
+                        </li>
+                      
+                    </ul>
+                    
+                </div> 
+                    <div class="nav_toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>     
+                    </div> 
+                </nav>
+            </header> 
+           <script>
+            /*=============== SHOW MENU ===============*/
+// const navMenu = document.getElementsByClassName('nav_menu'),
+const navMenu = document.getElementsByClassName("nav_menu")[0] as HTMLElement,
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
+
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+console.log("oli"+ navMenu);
+
+if(navToggle){
+    navMenu.style.visibility='hidden';
+
+    navToggle.addEventListener('click', () =>{
+        // navMenu.classList.add('show-menu')
+        navMenu.style.visibility='visible';
+        console.log("mostrar menu");
+    })
 }
 
-const { title } = Astro.props;
----
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.style.visibility='hidden';
+        // navMenu.classList.remove('show-menu')
+        console.log("cerré menu");
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    })
+}
+           </script>
+            <div class="bluebg">
+                <div class="blurbox"> 
+                    <div class="master_home_container">
+                   
+                        <div class="home__container container" >
+                         
+                            <!-- <img class="bg_home"src="assets/images/bannerprincipal.png" alt=""> <div>-->
+                                <div class="home__header">
+                                    <h1 class="big_titles_home" >Tu solución <span class="blue">POS</span> en la nube para gestión de <span class="green">ventas</span> e inventario</h1>
+                                
+                                <a href="#contact" class="button button--flex">
+                                    <span class="text_btn_blue">
+                                        <i class="ri-shopping-bag-line button__icon"></i></i> ¡Obtenlo Ahora!
+                                    </span>
+                                </a>
+                            </div>
+                            </div>
+                            <div class="image_home">
+                                <img src="assets/images/frame.png" alt="" >
+                            </div>
+                       
+                        </div>
+                </div>
+            </div>
+                
+            </div>
+
+                <div class="titles_container"> 
+                    <h1 class="section__title section__title-gradient">Control total, sin límites</h1>
+                </div>
+            <!--=============== CARDS ===============-->
+                    <div class="cardbox-container">
+                <div class="card-box">
+                    <div class="img_card">
+                        <img src="assets/images/icon1.png" alt="">
+                    </div>
+                    <div class="data_card">
+                        <p>Elimina los procesos de ventas manuales.</p>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="img_card">
+                        <img src="assets/images/icon2.png" alt="">
+                    </div>
+                    <div class="data_card">
+                        <p>Tendrás la comunicación con clientes en un solo lugar.</p>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="img_card">
+                        <img src="assets/images/icon3.png" alt="">
+                    </div>
+                    <div class="data_card">
+                        <p>Podrás controlar tu plan de ventas ,ver su rendimiento, inventario etc.</p>
+                    </div>
+                  </div>
+                </div>
+                  <!--=============== SLIDER ===============-->
+                  <div class="wrapper_container">
+                    <h1 class="big_titles_white">Descubre todos los beneficios que tiene <span class="green">Ventori</span></h1>
+
+                  <div class="wrapper">
+                        <i id="left" class="fa-solid fa-angle-left"></i>
+                    <ul class="carousel">
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard1.png" alt="img" draggable="false"></div>
+                        <h3>Control total de inventario</h3>
+                        <p>Con nuestro sistema de Kardex, tendrás un manejo preciso de tus existencias, evitando pérdidas innecesarias.</p>
+                    </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard2.png" alt="img" draggable="false"></div>
+                        <h3>Facturación sin límites</h3>
+                        <p>Número ilimitado de facturas POS.</p>
+                    </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard3.png" alt="img" draggable="false"></div>
+                        <h3>Gestión financiera simplificada</h3>
+                        <p> Genera recibos de caja y comprobantes de egreso de forma eficiente. Lleva un control completo de tus cuentas por pagar y por cobrar.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard4.png" alt="img" draggable="false"></div>
+                        <h3>Análisis de ventas avanzado</h3>
+                        <p> Obtén estadísticas detalladas de tus ventas por líneas, grupos y productos para tomar decisiones informadas.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard5.png" alt="img" draggable="false"></div>
+                        <h3>Clientes y proveedores</h3>
+                        <p>Mantén una base de datos actualizada de tus clientes y proveedores para brindar un servicio personalizado.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard6.png" alt="img" draggable="false"></div>
+                        <h3>Reportes de utilidades</h3>
+                        <p> Accede a reportes de utilidades que te ayudarán a mejorar tu rentabilidad.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard7.png" alt="img" draggable="false"></div>
+                        <h3>Actualizaciones de ley</h3>
+                        <p> Información de las últimas actualizaciones legales.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard8.png" alt="img" draggable="false"></div>
+                        <h3>Optimiza tus compras y caja</h3>
+                        <p> Realiza compras de manera inteligente y lleva un manejo óptimo de tu caja.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard9.png" alt="img" draggable="false"></div>
+                        <h3>Acceso en tiempo real</h3>
+                        <p> Visualiza los movimientos de tus cajas en tiempo real desde cualquier dispositivo móvil.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard10.png" alt="img" draggable="false"></div>
+                        <h3>Capacitación y soporte</h3>
+                        <p> Capacitación completa para usuarios y soporte técnico durante todo el tiempo que estés activo en nuestra plataforma.</p>
+                      </li>
+                      <li class="card">
+                        <div class="img"><img src="assets/images/iconcard11.png" alt="img" draggable="false"></div>
+                        <h3>Seguridad en la nube</h3>
+                        <p>Tu información está segura en nuestro servidor en la nube, apto para cualquier dispositivos.</p> 
+                      </li>
+                    </ul>
+                        <i id="right" class="fa-solid fa-angle-right"></i>
+                  </div>
+                </div>                  
+                </div>
+                  </div>
+                </div>
+
+            </div>
+                 <!--=============== PANELS SECTION ===============-->
+            <div class="container_panels">
+                <!-- <img class="bg_panel" src="assets/images/bgpanel1.png" alt=""> -->
+                <div id="image_container">
+                    <!-- <img src="assets/images/imagepanel.png" alt=""> -->
+                    <script>
+                       var animation = bodymovin.loadAnimation({
+
+                        container: document.getElementById('image_container'),
+
+                        path: 'assets/images/imagepanel.json',
+
+                        renderer: 'svg',
+
+                        loop: true,
+
+                        autoplay: true,
+
+                        name: "Demo Animation",
+
+                        });              
+                    </script>
+                </div>
+
+                <div class="panels_data">
+                    <h1 class="big_titles">Acceso en <span class="blue">tiempo real</span>, en cualquier lugar</h1>
+                    <p>Con nuestros paneles de ventas e inventario, simplificamos la gestión de tu negocio en la nube.</p>
+                    <a href="#contact" class="button button--flex">
+                        <span class="text_btn_blue">¡Conoce más!
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="textbar_container">
+                <div class="firsttext"> Ventori es&nbsp </div>
+                <div class="option">
+                    <span></span>
+                </div>
+              <!-- <ul class="option">
+                <li><span>rápidez </span></li>
+                <li><span> seguridad</span></li>
+                <li><span>más ventas </span></li>
+                <li><span>tu mejor aliado </span></li>
+              </ul> -->
+
+              <script>
+                const text = document.querySelector(".option");
+             
+                const textLoad = () => {
+                    setTimeout(() => {
+                    text.textContent = "rapidez";
+                }, 0);
+                
+                setTimeout(() => {
+                    text.textContent = "seguridad ";
+                }, 1000);
+
+                setTimeout(() => {
+                    text.textContent = "más ventas ";
+                }, 2000);
+
+                setTimeout(() => {
+                    text.textContent = "tu mejor aliado";
+                }, 3000);
+                }
+                textLoad();
+                setInterval(textLoad,4000);
+              </script>
+                <!-- <div class="options">
+                <span class="sectext"> rápidez </span>
+                <span class="sectext"> seguridad </span>
+                <span class="sectext"> más ventas </span>
+                <span class="sectext"> tu mejor aliado</span>
+            </div> -->
+                <!-- <h2 class="textbar_title">Ventori es <span class="green">rápidez ...</span></h2> -->
+            </div>
+             <!--=============== SUPPORT SECTION ===============-->
+             <div class="container_panels">
+                <div class="image_container">
+                    <img src="assets/images/imagepanel2.png" alt="">
+                </div>
+
+                <div class="panels_data">
+                    <h1 class="big_titles">No te dejamos solo</h1>
+                    <p>Ofrecemos <span class="blue"> capacitación completa </span>para usuarios y soporte técnico activo para garantizar tu éxito continuo.</p>
+                    <a href="#contact" class="button button--flex">
+                        <span class="text_btn_blue">¡Pide tu demo!
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!--=============== POS SECTION ===============-->
+            <div class="container_pos">
+                <div class="panels_data">
+                    <h1 class="big_titles_white_pos">Solución completa adaptada a tu  negocio </h1>
+                    <p class="p_white">Ofrecemos Nuestro servicio POS en la nube es la solución perfecta tanto para negocios físicos como para eCommerce.</p>
+                    <a href="#contact" class="button button_blue">
+                        <span class="text_btn">¡Pide tu demo!
+                        </span>
+                    </a>
+                </div>
+                        <div class="image_container_pos">
+                            <div class="panels_data">
+                                <img src="assets/images/imagepanel3.png" alt="">
+                            </div>
+                      </div>
+            </div>
+
+            
+             <!--=============== CONTACT ===============-->
+            
+
+            <div class="container_panels_contact" id="contact">   
+                    <div class="titles_container_pos"> 
+                        <h1 class="section__title section__title-gradient">Contáctanos</h1>
+                    </div>
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Nombre Completo*" class="input_contact">
+                        <input type="email" placeholder="Correo electronico*" class="input_contact">
+                        <input type="number" placeholder="Telefono*" class="input_contact">
+                        <input type="text" placeholder="Mensaje" class="input_contact_msg">
+
+                        <a href="" class="button button_blue">
+                            <span class="text_btn">
+                                <i class="ri-send-plane-line button__icon"></i></i>Enviar
+                            </span>
+                        </a>
+                    </form>
+                
+            </div>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <a href="" class="footer__logo">
+                    <img src="assets/images/logo_white.png" alt="">
+                </a>
+    
+                <div class="footer__content">
+                    <h3 class="footer__title">Contácto</h3>
+    
+                    <ul class="footer__links">
+                        <li>
+                            <a href="" class="footer__link">  <i class="ri-shopping-bag-line button__icon"></i></i> asatizabal.helppi@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">  <i class="ri-shopping-bag-line button__icon"></i></i> +57 3157164899 </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__content">
+                    <h3 class="footer__title">Ayuda</h3>
+    
+                    <ul class="footer__links">
+                        <li>
+                            <a href="" class="footer__link">Soporte</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__content">
+                    <form action="" class="footer__form">
+                        <input type="email" placeholder="Email" class="footer__input">
+                        <button class="button button--flex">
+                            <i class="ri-send-plane-line button__icon"></i> Enviar
+                        </button>
+                    </form>
+    
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line scrollup__icon"></i>
+        </a>
+      
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+     
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    });
+});
+
+const dragStart = (e) => {
+    isDragging = true;
+    carousel.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+}
+
+const infiniteScroll = () => {
+    // If the carousel is at the beginning, scroll to the end
+    if(carousel.scrollLeft === 0) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+    }
+    // If the carousel is at the end, scroll to the beginning
+    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+    }
+
+    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+    // Autoplay the carousel after every 2500 ms
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+    </script>
+    </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
