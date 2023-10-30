@@ -33,9 +33,67 @@
                     <a href="#" class="nav__logo">
                         <img class="logo_home"src="assets/images/logo.png" alt="">
                     </a>
+                    <div class="container_access">
+                        <span class="btn_container">
+                            <i class="ri-user-line"></i></i> Iniciar sesión
+                        </span>
+                        <span class="btn_container">
+                            <i class="ri-profile-line"></i></i>Registrate
+                        </span>
+                    </div>
+                    <div class="nav_menu"id="navmenu">
+
+                    <ul class="nav_list">
+                        <div class="nav_close" id="nav-close">
+                            <i class="ri-close-line"></i>
+                        </div>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Inicio sesión</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Registrate</a>
+                        </li>
+                      
+                    </ul>
+                    
+                </div> 
+                    <div class="nav_toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>     
+                    </div> 
                 </nav>
             </header> 
-           
+           <script>
+            /*=============== SHOW MENU ===============*/
+// const navMenu = document.getElementsByClassName('nav_menu'),
+const navMenu = document.getElementsByClassName("nav_menu")[0] as HTMLElement,
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
+
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+console.log("oli"+ navMenu);
+
+if(navToggle){
+    navMenu.style.visibility='hidden';
+
+    navToggle.addEventListener('click', () =>{
+        // navMenu.classList.add('show-menu')
+        navMenu.style.visibility='visible';
+        console.log("mostrar menu");
+    })
+}
+
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.style.visibility='hidden';
+        // navMenu.classList.remove('show-menu')
+        console.log("cerré menu");
+
+    })
+}
+           </script>
             <div class="bluebg">
                 <div class="blurbox"> 
                     <div class="master_home_container">
